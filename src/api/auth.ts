@@ -7,15 +7,18 @@ const axiosConfig = {
   withCredentials: true,
 };
 
+
+//utilizamos esta funcion para enviar una solicitud de inicio de sesion a la API utilizando el metodo POST y devuelve una promesa que se resuelve con la respuesta a esa solicitud
 export const login = async (email: string, password: string) => {
   // Send cookie with x-access-token response header
   axios.defaults.withCredentials = true;
+  //pasamos la url de la api, con la url exacta de la parte de la api y el cuerpo de la solicitud es un objeto con dos propiedades cuyos valores son los argumentos de esta funcion
   const res = axios.post(baseUrl + "/api/auth/signin", { email, password });
   return res;
 };
 
-export const register = (nick: string, email: string, password: string) => {
-  return axios.post(baseUrl + "/api/auth/signup", { nick, email, password });
+export const register = (user_id: string, username: string, email: string, password: string) => {
+  return axios.post( "https://48qgipie48.execute-api.eu-south-2.amazonaws.com/Test/create_user", { user_id, username, email, password });
 };
 
 export const checkAuth = () => {

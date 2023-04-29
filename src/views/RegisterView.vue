@@ -2,6 +2,15 @@
   <div class="register">
     <h1 class="title">Sign Up</h1>
     <form class="form" @submit.prevent="register">
+      <label class="form-label" for="#user_id">DNI:</label>
+      <input
+        v-model="user_id"
+        class="form-input"
+        type="text"
+        id="user_id"
+        required
+        placeholder="DNI"
+      />
       <label class="form-label" for="#email">Email:</label>
       <input
         v-model="email"
@@ -47,6 +56,7 @@
 import { register } from "@/api/auth";
 export default {
   data: () => ({
+    user_id: "",
     email: "",
     nick: "",
     password: "",
@@ -56,7 +66,7 @@ export default {
   methods: {
     async register() {
       try {
-        await register(this.nick, this.email, this.password);
+        await register(this.user_id, this.nick, this.email, this.password);
         this.$router.push("/");
       } catch (error) {
         console.log(error);
