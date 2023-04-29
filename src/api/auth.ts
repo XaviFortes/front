@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Import the API URL from the globals.
-import { baseUrl } from "./globals";
+import { baseUrl, baseUrl2 } from "./globals";
 
 const axiosConfig = {
   withCredentials: true,
@@ -19,7 +19,7 @@ export const login = async (email: string, password: string) => {
 
 export const register = (user_id: string, username: string, email: string, password: string) => {
   axios.defaults.withCredentials = false;
-  return axios.post( "https://48qgipie48.execute-api.eu-south-2.amazonaws.com/Test/create_user", { user_id, username, email, password });
+  return axios.post( baseUrl2 + "/create_user", { user_id, username, email, password });
 };
 
 export const checkAuth = () => {
