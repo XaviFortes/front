@@ -27,6 +27,11 @@ const router = createRouter({
       component: () => import("../views/ActivateView.vue"),
     },
     {
+      path: "/form",
+      name: "formulario",
+      component: () => import("../views/FormView.vue"),
+    },
+    {
       path: "/chat",
       name: "chat",
       component: () => import("../views/ChatView.vue"),
@@ -70,7 +75,7 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
-  const publicPages = ["/login", "/signup", "/", "/activate"];
+  const publicPages = ["/login", "/signup", "/", "/activate", "/form"];
   const authRequired = !publicPages.includes(to.path);
   const toast = useToast();
   const loggedIn = await isLogged().then((res) => {
