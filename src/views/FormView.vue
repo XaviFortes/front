@@ -127,12 +127,18 @@ methods: {
 </script>
 
 <style lang="scss" scoped>
+.modify_user {
+  position: relative;
+  padding-top: 50px; /* misma altura que el menú */
+  z-index: 5; /* menor z-index para que aparezca debajo del menú */
+}
 .register {
 padding: 2rem;
 }
 .title {
 text-align: center;
-color: darkgray;
+  color: darkgray;
+  padding: 5rem 0 0 2rem;
 }
 .form {
 margin: 3rem auto;
@@ -146,6 +152,7 @@ background: rgba(19, 35, 47, 0.9);
 border-radius: 5px;
 padding: 40px;
 box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
+
 }
 .form-label {
 margin-top: 2rem;
