@@ -78,6 +78,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .login {
+  min-width: 100vw;
+  position: relative;
+  padding-top: 50px;
+  z-index: 5;
   padding: 2rem;
 }
 .title {

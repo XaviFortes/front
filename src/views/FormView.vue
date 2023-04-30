@@ -128,9 +128,10 @@ methods: {
 
 <style lang="scss" scoped>
 .modify_user {
+  min-width: 100vw;
   position: relative;
-  padding-top: 50px; /* misma altura que el menú */
-  z-index: 5; /* menor z-index para que aparezca debajo del menú */
+  padding-top: 50px;
+  z-index: 5;
 }
 .register {
 padding: 2rem;
@@ -145,9 +146,9 @@ margin: 3rem auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
-width: 20%;
-min-width: 350px;
-max-width: 100%;
+width: 40%;
+min-width: 30vw;
+max-width: 80vw;
 background: rgba(19, 35, 47, 0.9);
 border-radius: 5px;
 padding: 40px;

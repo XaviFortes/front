@@ -1,179 +1,129 @@
 <template>
-  <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
-    <div class="logo">
-      <img :src="logoURL" alt="Vue" />
-    </div>
-
-    <div class="menu-toggle-wrap">
-      <button class="menu-toggle" @click="ToggleMenu">
-        <span class="material-icons">keyboard_double_arrow_right</span>
-      </button>
-    </div>
-
-    <h3>Menu</h3>
-    <div class="menu">
-      <router-link to="/" class="button">
-        <span class="material-icons">home</span>
-        <span class="text">Home</span>
-      </router-link>
-      <router-link to="/chat" class="button">
-        <span class="material-icons">forum</span>
-        <span class="text">Chats</span>
-      </router-link>
-      <router-link to="/login" class="button">
-        <span class="material-icons">login</span>
-        <span class="text">Login</span>
-      </router-link>
-      <router-link to="/contact" class="button">
-        <span class="material-icons">email</span>
-        <span class="text">Contact</span>
-      </router-link>
-    </div>
-
-    <div class="flex"></div>
-
-    <div class="menu">
-      <router-link to="/profile" class="button">
-        <span class="material-icons">settings</span>
-        <span class="text">Settings</span>
-      </router-link>
-    </div>
-  </aside>
-</template>
-
-<script setup lang="ts">
-import { ref } from "vue";
-import logoURL from "../assets/logo.svg";
-const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
-const ToggleMenu = () => {
-  is_expanded.value = !is_expanded.value;
-  localStorage.setItem("is_expanded", is_expanded.value.toString());
-};
-</script>
-
-<style lang="scss" scoped>
-aside {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--dark);
-  color: var(--light);
-  width: calc(2rem + 32px);
-  overflow: hidden;
-  min-height: 100vh;
-  padding: 1rem;
-  transition: 0.2s ease-in-out;
+    <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
+      <div class="logo">
+        <img :src="logoURL" alt="Vue" />
+      </div>
   
-  .flex {
-    flex: 1 1 0%;
-  }
-  .logo {
-    margin-bottom: 1rem;
-    img {
-      width: 2rem;
-    }
-  }
-  .menu-toggle-wrap {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
-    position: relative;
-    top: 0;
-    transition: 0.2s ease-in-out;
-    .menu-toggle {
-      transition: 0.2s ease-in-out;
-      .material-icons {
-        font-size: 2rem;
-        color: var(--light);
-        transition: 0.2s ease-out;
-      }
+ 
+  
+     
+      <div class="menu">
+        <router-link to="/" class="button">
+          <span class="material-icons">home</span>
+          <span class="text">Home</span>
+        </router-link>
+        <router-link to="/form" class="button">
+          <span class="material-icons">list</span>
+          <span class="text">Modify Profile</span>
+        </router-link>
+        <router-link to="/signup" class="button">
+          <span class="material-icons">key</span>
+          <span class="text">Create Account</span>
+        </router-link>
+        <router-link to="/contact" class="button">
+          <span class="material-icons">email</span>
+          <span class="text">Contact</span>
+        </router-link>
+      </div>
+  
+      <div class="flex"></div>
+  
+      <div class="menu">
+        <router-link to="/profile" class="button">
+          <span class="material-icons">settings</span>
+          <span class="text">Settings</span>
+        </router-link>
+      </div>
+    </aside>
+  </template>
+  
+  <script setup lang="ts">
+  import { ref } from "vue";
+  import logoURL from "../assets/logo.svg";
+  const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
+  const ToggleMenu = () => {
+    is_expanded.value = !is_expanded.value;
+    localStorage.setItem("is_expanded", is_expanded.value.toString());
+  };
+  </script>
+<style>
+aside {
+  position: fixed;
+  top: 0;
+  background-color: #2f3848;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
 
-      &:hover {
-        .material-icons {
-          color: var(--primary);
-          transform: translateX(0.5rem);
-        }
-      }
-    }
-  }
-  h3,
-  .button .text {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  h3 {
-    color: var(--grey);
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-  }
-  .menu {
-    margin: 0 -1rem;
-    .button {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      transition: 0.2s ease-in-out;
-      padding: 0.5rem 1rem;
-      .material-icons {
-        margin-left: 1.3em;
-        font-size: 2rem;
-        color: var(--dark);
-        transition: 0.2s ease-in-out;
-      }
-      .text {
-        color: var(--dark);
-        transition: 0.2s ease-in-out;
-      }
-      &:hover {
-        background-color: var(--dark-alt);
-        .material-icons,
-        .text {
-          color: var(--primary);
-        }
-      }
-      &.router-link-exact-active {
-        background-color: var(--dark-alt);
-        border-right: 5px solid var(--primary);
-        .material-icons,
-        .text {
-          color: var(--primary);
-        }
-      }
-    }
-  }
-  .footer {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    p {
-      font-size: 0.875rem;
-      color: var(--grey);
-    }
-  }
-  &.is-expanded {
-    width: var(--sidebar-width);
-    .menu-toggle-wrap {
-      top: -3rem;
+.logo img {
+  height: 50px;
+  width: 50px;
+}
 
-      .menu-toggle {
-        transform: rotate(-180deg);
-      }
-    }
-    h3,
-    .button .text {
-      opacity: 1;
-    }
-    .button {
-      .material-icons {
-        margin-right: 1rem;
-      }
-    }
-    .footer {
-      opacity: 0;
-    }
-  }
-  @media (max-width: 1024px) {
-    position: absolute;
-    z-index: 99;
-  }
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.menu .button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  margin-left: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu .button:hover {
+  background-color: #424f63;
+}
+
+.menu .button .material-icons {
+  margin-right: 10px;
+}
+
+.flex {
+  flex: 1;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
+}
+
+.menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.is-expanded .menu {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+main {
+  margin-top: 70px;
 }
 </style>

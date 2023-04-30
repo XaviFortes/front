@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Sidebar -->
-    <SideBar2/>
+    <SideBar/>
   </div>
   <div class="mapp">
  
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 
-import SideBar2 from "./components/SideBar2.vue";
+import SideBar from "./components/SideBar.vue";
 </script>
 
 <style lang="scss">

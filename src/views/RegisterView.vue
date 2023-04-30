@@ -78,8 +78,11 @@ export default {
 
 <style lang="scss" scoped>
 .register {
-  padding: 5rem;
-  
+  min-width: 100vw;
+  position: relative;
+  padding-top: 50px;
+  z-index: 5;
+  padding: 5rem;  
 }
 .title {
   text-align: center;
