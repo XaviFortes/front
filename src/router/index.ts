@@ -42,6 +42,11 @@ const router = createRouter({
       component: () => import("../views/ChatRoomView.vue"),
     },
     {
+      path: "/user/:user_id",
+      name: "user",
+      component: () => import("../views/UserView.vue"),
+    },
+    {
       path: "/joinChatRoom",
       name: "joinChatRoom",
       component: () => import("../views/JoinChatRoomView.vue"),
@@ -74,8 +79,9 @@ const router = createRouter({
   ],
 });
 
+/*
 router.beforeEach(async (to, from, next) => {
-  const publicPages = ["/login", "/signup", "/", "/activate", "/form"];
+  const publicPages = ["/login", "/signup", "/", "/activate", "/form", "/user", "/user/:user_id"];
   const authRequired = !publicPages.includes(to.path);
   const toast = useToast();
   const loggedIn = await isLogged().then((res) => {
@@ -91,5 +97,6 @@ router.beforeEach(async (to, from, next) => {
   }
   next();
 });
+*/
 
 export default router;
