@@ -22,6 +22,12 @@ export const register = (user_id: string, username: string, email: string, passw
   return axios.post( baseUrl2 + "/create_user", { user_id, username, email, password });
 };
 
+export const modify_user = (user_id: string, password: string, full_name: string, visual_disability: number, mental_disability: number, deaf_disability: number, birth_date: string, description: string, abilities: string, specific_disability: string) => {
+  axios.defaults.withCredentials = false;
+  return axios.put(baseUrl2 + "/modify_user",{user_id, password, full_name, visual_disability, mental_disability, deaf_disability, birth_date, description, abilities, specific_disability });
+};
+
+
 export const checkAuth = () => {
   axios.defaults.withCredentials = true;
   return axios.get(baseUrl + "/api/user/checkJWT", axiosConfig);
