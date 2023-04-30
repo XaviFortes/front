@@ -7,6 +7,7 @@ import CommunityIcon from "./icons/IconCommunity.vue";
 </script>
 
 <template>
+  <div class="center">
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
@@ -83,4 +84,6 @@ import CommunityIcon from "./icons/IconCommunity.vue";
       >@xavifortes</a
     >.
   </WelcomeItem>
+</div>
 </template>
+

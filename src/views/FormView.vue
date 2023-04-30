@@ -28,7 +28,7 @@
         required
         placeholder="Full Name"
       />
-      <label class="form-select" for="#visual_disability">Visual Disability:</label>
+      <label class="form-select-bkg" for="#visual_disability">Visual Disability:</label>
       <select v-model="visual_disability" class="form-select" id="visual_disability" required>
         <option value=0>Selecciona una opción</option>
         <option value=0>0%</option>
@@ -165,8 +165,21 @@ margin-bottom: 0.5rem;
 }
 .form-select{
   margin-top: 2rem;
+  padding: 10px;
+  background-color: #0b9185;
 color: white;
+border: 1px solid white;
 margin-bottom: 0.5rem;
+&:first-of-type {
+margin-top: 0rem;
+}
+
+}
+.form-select-bkg{
+  margin-top: 2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  
 &:first-of-type {
 margin-top: 0rem;
 }
