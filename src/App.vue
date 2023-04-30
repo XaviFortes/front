@@ -1,15 +1,20 @@
 <template>
-  <div class="mapp">
+  <div>
     <!-- Sidebar -->
-    <Sidebar />
+    <SideBar2/>
+  </div>
+  <div class="mapp">
+ 
 
     <!-- Content -->
     <router-view />
   </div>
+  
 </template>
 
 <script setup lang="ts">
-import Sidebar from "./components/SideBar.vue";
+
+import SideBar2 from "./components/SideBar2.vue";
 </script>
 
 <style lang="scss">
@@ -41,6 +46,7 @@ button {
 .mapp {
   min-width: 100%;
   display: flex;
+  margin-top: 60px;
   main {
     flex: 1 1 0;
     padding: 2rem;
