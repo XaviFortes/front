@@ -78,11 +78,12 @@ export default {
 
 <style lang="scss" scoped>
 .register {
-  padding: 2rem;
+  padding: 5rem;
+  
 }
 .title {
   text-align: center;
-  color: darkgray;
+  color: #1ab188;
 }
 .form {
   margin: 3rem auto;
@@ -94,13 +95,15 @@ export default {
   max-width: 100%;
   background: rgba(19, 35, 47, 0.9);
   border-radius: 5px;
-  padding: 40px;
+  padding: 20px;
   box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
 }
 .form-label {
   margin-top: 2rem;
   color: white;
   margin-bottom: 0.5rem;
+  font-weight: bold;
+  
   &:first-of-type {
     margin-top: 0rem;
   }
@@ -109,7 +112,7 @@ export default {
   padding: 10px 15px;
   background: none;
   background-image: none;
-  border: 1px solid white;
+  border: 1px solid #1ab188;
   color: white;
   &:focus {
     outline: 0;
@@ -124,10 +127,12 @@ export default {
   padding: 1rem 0;
   cursor: pointer;
   transition: background 0.2s;
+  font-weight: bold; /* Agregamos esta línea para poner el texto en negrita */
   &:hover {
     background: #0b9185;
   }
 }
+
 .error {
   margin: 1rem 0 0;
   color: #ff4a96;
