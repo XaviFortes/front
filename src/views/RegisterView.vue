@@ -115,7 +115,7 @@ export default {
   padding: 10px 15px;
   background: none;
   background-image: none;
-  border: 1px solid #1ab188;
+  border: 1px solid white;
   color: white;
   &:focus {
     outline: 0;

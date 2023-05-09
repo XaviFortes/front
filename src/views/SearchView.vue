@@ -43,10 +43,11 @@
   <style lang="scss" scoped>
   .activate {
     padding: 2rem;
+    min-width: 100vw;
   }
   .title {
     text-align: center;
-    color: darkgray;
+    color: #1ab188;
   }
   .form {
     margin: 3rem auto;

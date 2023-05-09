@@ -86,7 +86,7 @@ export default {
 }
 .title {
   text-align: center;
-  color: darkgray;
+  color: #1ab188;
 }
 .form {
   margin: 3rem auto;

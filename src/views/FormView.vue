@@ -136,7 +136,7 @@ padding: 2rem;
 }
 .title {
 text-align: center;
-  color: darkgray;
+  color: #1ab188;
   padding: 5rem 0 0 2rem;
 }
 .form {
