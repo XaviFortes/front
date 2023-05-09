@@ -30,31 +30,29 @@
       />
       <label class="form-select-bkg" for="#visual_disability">Visual Disability:</label>
       <select v-model="visual_disability" class="form-select" id="visual_disability" required>
-        <option value=0>Selecciona una opción</option>
+        <option value=0>Select an option</option>
         <option value=0>0%</option>
-        <option value=1>Del 1% al 33%</option>
-        <option value=2>Del 33% al 66%</option>
-        <option value=3>Del 66% al 100%</option>
+        <option value=1>From 1% to 33%</option>
+        <option value=2>From 33% to 66%</option>
+        <option value=3>From 66% to 100%</option>
       </select>
 
       <label class="form-label" for="#mental_disability">Mental Disability:</label>
-      <input
-        v-model="mental_disability"
-        class="form-input"
-        type="number"
-        id="mental_disability"
-        required
-        placeholder="Mental Disability"
-      />
+      <select v-model="mental_disability" class="form-select" id="mental_disability" required>
+        <option value=0>Select an option</option>
+        <option value=0>0%</option>
+        <option value=1>From 1% to 33%</option>
+        <option value=2>From 33% to 66%</option>
+        <option value=3>From 66% to 100%</option>
+      </select>
       <label class="form-label" for="#deaf_disability">Deaf Disability:</label>
-      <input
-        v-model="deaf_disability"
-        class="form-input"
-        type="number"
-        id="deaf_disability"
-        required
-        placeholder="Deaf Disability"
-      />
+      <select v-model="deaf_disability" class="form-select" id="deaf_disability" required>
+        <option value=0>Select an option</option>
+        <option value=0>0%</option>
+        <option value=1>From 1% to 33%</option>
+        <option value=2>From 33% to 66%</option>
+        <option value=3>From 66% to 100%</option>
+      </select>
       <label class="form-label" for="#birth_date">Birth Date:</label>
       <input
         v-model="birth_date"
@@ -166,12 +164,11 @@ margin-bottom: 0.5rem;
 .form-select{
   margin-top: 2rem;
   padding: 10px;
-  background-color: #0b9185;
-color: white;
-border: 1px solid white;
-margin-bottom: 0.5rem;
-&:first-of-type {
-margin-top: 0rem;
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 0.5rem;
+  &:first-of-type {
+  margin-top: 0rem;
 }
 
 }
@@ -206,6 +203,22 @@ transition: background 0.2s;
 &:hover {
   background: #0b9185;
 }
+}
+select {
+  width: 100%;
+  padding: 10px 15px;
+  background: none;
+  background-image: none;
+  border: 1px solid white;
+  &:focus {
+    outline: 0;
+    border-color: #1ab188;
+  }
+}
+select option {
+  background: rgba(19, 35, 47, 0.9);
+  color: white;
+  border: none;
 }
 .error {
 margin: 1rem 0 0;

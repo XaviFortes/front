@@ -17,9 +17,9 @@
         <span class="material-icons">key</span>
         <span class="text">Create Account</span>
       </router-link>
-      <router-link to="/contact" class="button">
-        <span class="material-icons">email</span>
-        <span class="text">Contact</span>
+      <router-link to="/search" class="button">
+        <span class="material-icons">search</span>
+        <span class="text">Search User</span>
       </router-link>
     </div>
 
@@ -38,10 +38,6 @@
   import { ref } from "vue";
   import logoURL from "../assets/logo.svg";
   const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
-  const ToggleMenu = () => {
-    is_expanded.value = !is_expanded.value;
-    localStorage.setItem("is_expanded", is_expanded.value.toString());
-  };
 </script>
 
 

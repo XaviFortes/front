@@ -19,20 +19,32 @@
 
 <script lang="ts">
 import { ref, onMounted } from "vue";
+import { useToast } from "vue-toastification";
 import { useRoute } from "vue-router";
 import axios from "axios";
+import router from "@/router";
 
 export default {
   setup() {
     const route = useRoute();
     const user = ref(null);
+    const toast = useToast();
 
     // Fetch user data from API when component is mounted
     onMounted(async () => {
       const user_id = route.params.user_id;
       axios.defaults.withCredentials = false;
-      const response = await axios.get(`https://48qgipie48.execute-api.eu-south-2.amazonaws.com/Test/get_user?dni=${user_id}`);
-      user.value = response.data;
+      try {
+        const response = await axios.get(`https://48qgipie48.execute-api.eu-south-2.amazonaws.com/Test/get_user?dni=${user_id}`);
+        user.value = response.data;
+      } catch (error) {
+        console.log(error);
+        toast.error("User not found");
+        // go back to search page
+        router.push("/search");
+        // alert("User not found");
+      }
+      
     });
     return { user };
   },

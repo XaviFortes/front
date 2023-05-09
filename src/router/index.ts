@@ -32,29 +32,9 @@ const router = createRouter({
       component: () => import("../views/FormView.vue"),
     },
     {
-      path: "/chat",
-      name: "chat",
-      component: () => import("../views/ChatView.vue"),
-    },
-    {
-      path: "/chat/:chat_id",
-      name: "chatroom",
-      component: () => import("../views/ChatRoomView.vue"),
-    },
-    {
       path: "/user/:user_id",
       name: "user",
       component: () => import("../views/UserView.vue"),
-    },
-    {
-      path: "/joinChatRoom",
-      name: "joinChatRoom",
-      component: () => import("../views/JoinChatRoomView.vue"),
-    },
-    {
-      path: "/createChatRoom",
-      name: "createChatRoom",
-      component: () => import("../views/CreateChatRoomView.vue"),
     },
     {
       path: "/logout",
@@ -62,14 +42,14 @@ const router = createRouter({
       component: () => import("../views/LogoutView.vue"),
     },
     {
-      path: "/profile",
-      name: "profile",
-      component: () => import("../views/ProfileView.vue"),
-    },
-    {
       path: "/contact",
       name: "contact",
       component: () => import("../views/ContactView.vue"),
+    },
+    {
+      path: "/search",
+      name: "search",
+      component: () => import("../views/SearchView.vue"),
     },
     {
       path: "/:pathMatch(.*)*",
