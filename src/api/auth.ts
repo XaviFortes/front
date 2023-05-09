@@ -64,14 +64,13 @@ export const resendActivation = (email: string) => {
   );
 };
 
-export const create_coverletter = (name: string, jobTitle: string, company: string, skills: string[]) => {
+export const create_coverletter = (user_id: string, username: string) => {
   return axios.post(
     baseUrl + "/api/coverletter",
     {
-      name: name,
-      jobTitle: jobTitle,
-      company: company,
-      skills: skills,
+     user_id,
+     username,
+     
     },
     axiosConfig
   );
