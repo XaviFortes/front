@@ -52,6 +52,13 @@ const router = createRouter({
       component: () => import("../views/SearchView.vue"),
     },
     {
+      path: "/coverletter",
+      name: "coverletter",
+      component: () => import("../views/CreateCoverLetterView.vue"),
+    },
+  
+
+    {
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: () => import("../views/NotFoundView.vue"),
