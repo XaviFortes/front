@@ -63,3 +63,16 @@ export const resendActivation = (email: string) => {
     axiosConfig
   );
 };
+
+export const create_coverletter = (user_id: string, username: string) => {
+  return axios.post(
+    baseUrl + "/api/coverletter",
+    {
+     user_id,
+     username,
+     
+    },
+    axiosConfig
+  );
+};
+
