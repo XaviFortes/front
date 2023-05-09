@@ -36,7 +36,7 @@
   
 <script setup lang="ts">
   import { ref } from "vue";
-  import logoURL from "../assets/logo.svg";
+  import logoURL from "../../public/icono.png";
   const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
 </script>
 
@@ -58,7 +58,7 @@
   
   .logo img {
     height: 50px;
-    width: 50px;
+    width: 150px;
   }
   
   h3 {
