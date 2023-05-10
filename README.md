@@ -6,12 +6,11 @@ A continuación, os mostraremos en este README.md las diferentes secciones que d
 
 ## Descripción del Proyecto
 
-Una breve descripción de:
-¿Qué problema estamos tratando de resolver? Deberéis indicar qué reto habéis elegido: ONCE, Cruz Roja , Acciona y qué problemática estáis tratando de resolver.
-¿Cuál es la solución propuesta? En un máximo de 200 palabras, indicarnos los aspectos más importantes de vuestra solución y qué la hace única.  
-Descripción de la Solución
+Se ha desarrollado una aplicación web con el objetivo de ayudar a personas con discapacidades a conseguir trabajo. La aplicación permite a los usuarios registrarse y completar un formulario en el cual pueden proporcionar información sobre sus discapacidades y habilidades. A partir de esta información, la inteligencia artificial de la aplicación genera una carta de presentación personalizada para cada usuario, la cual puede ser utilizada para solicitar empleo en una empresa.
 
-En esta sección podéis realizar una descripción más detallada de vuestra aplicación/solución, indicando el caso de uso, los pros y contras de vuestra implementación, etc.
+El propósito de la aplicación es reducir las barreras que enfrentan las personas con discapacidades al buscar empleo, proporcionándoles una herramienta que les permita presentarse de manera más efectiva a los empleadores. Además, la aplicación también ayuda a las empresas a diversificar su fuerza laboral, fomentando la inclusión y la igualdad de oportunidades.
+
+En resumen, la aplicación web desarrollada ofrece una solución innovadora y práctica para mejorar la empleabilidad de personas con discapacidades, al mismo tiempo que contribuye a crear un entorno laboral más inclusivo y diverso.
 
 ## Diagrama de Arquitectura
 
