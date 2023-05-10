@@ -45,5 +45,7 @@ En esta sección podréis subir o enlazar vuestra vídeo presentación. Tenéis 
 
 ## Team Members
 
-Lista de los miembros del equipo e ID de correo electrónico.
+Xavier Fortes (itsfortes@gmail.com)
+Carlos Hinojosa (carlos.hinojosa.vaca@gmail.com)
+Carlos Antón (carlos.anton.ibeas.99@gmail.com)
  
