@@ -11,7 +11,7 @@
           required
           placeholder="DNI"
         />
-        <input class="form-submit" type="submit" value="Activate Account" />
+        <input class="form-submit" type="submit" value="Search Account" />
       </form>
     </div>
   </template>

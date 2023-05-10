@@ -1,7 +1,7 @@
 <template>
     <div class="login">
       <h1 class="title">Create Cover Letter</h1>
-      <form class="form" @submit.prevent="login">
+      <form class="form" @submit.prevent="createcl">
         <label class="form-label" for="#username">Username:</label>
         <input
           v-model="username"
@@ -11,42 +11,39 @@
           required
           placeholder="Username"
         />
-        <label class="form-label" for="#password">Password:</label>
-        <input
-          v-model="password"
-          class="form-input"
-          type="password"
-          id="password"
-          required
-          placeholder="Password"
-        />
         <input class="form-submit" type="submit" value="Create" />
       </form>
       <div class="form-center">
+        <p v-if="loading" class="form-paragraph">Loading...</p>
         <p v-html="text" class="form-paragraph"></p> <!-- Changed from textarea to p -->
       </div>
     </div>
   </template>
   
   <script>
-  import { login } from "@/api/auth";
+  import { createcoverletter } from "@/api/user";
   
   export default {
     data() {
       return {
         username: "",
-        password: "",
         text: "",
+        loading: false, // Add a loading state
       };
     },
     methods: {
-      async login() {
+      async createcl() {
         try {
-          const response = await login(this.username, this.password);
-          this.text = response.data; // assign the response to the data object
+          this.loading = true;
+          const response = await createcoverletter(this.username);
+          // this.text = response.data.content;
+          this.text = response.data.content.replace(/\n/g, '<br>');
+          console.log(response.data.content);
         } catch (error) {
           console.error(error);
           this.error = true;
+        } finally {
+          this.loading = false; // Set loading to false after receiving the response
         }
       },
     },
@@ -109,6 +106,7 @@
   }
   
   .form-paragraph {
+    width: 40vw;
     padding: 0.5rem;
     border-radius: 3px;
     border: none;

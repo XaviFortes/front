@@ -38,7 +38,7 @@
         placeholder="Password"
       />
       <label class="form-label" for="#password-repeat"
-        >Repite la contraeña:</label
+        >Repeat password:</label
       >
       <input
         v-model="passwordRepeat"

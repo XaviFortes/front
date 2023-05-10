@@ -13,30 +13,34 @@
         <span class="material-icons">list</span>
         <span class="text">Modify Profile</span>
       </router-link>
-      <router-link to="/signup" class="button">
-        <span class="material-icons">key</span>
-        <span class="text">Create Account</span>
-      </router-link>
       <router-link to="/search" class="button">
         <span class="material-icons">search</span>
         <span class="text">Search User</span>
+      </router-link>
+      <router-link to="/coverletter" class="button">
+        <span class="material-icons">description</span>
+        <span class="text">Create CV</span>
       </router-link>
     </div>
 
     <div class="flex"></div>
 
-    <!-- <div class="menu">
-      <router-link to="/" class="button">
+    <div class="menu">
+      <router-link to="/signup" class="button">
+        <span class="material-icons">key</span>
+        <span class="text">Create Account</span>
+      </router-link>
+      <!-- <router-link to="/" class="button">
         <span class="material-icons">settings</span>
         <span class="text">Settings</span>
-      </router-link>
-    </div> -->
+      </router-link> -->
+    </div>
   </aside>
 </template>
   
 <script setup lang="ts">
   import { ref } from "vue";
-  import logoURL from "../../public/icono.png";
+  import logoURL from "/icono.png";
   const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
 </script>
 
