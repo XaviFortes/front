@@ -12,6 +12,8 @@ El propósito de la aplicación es reducir las barreras que enfrentan las person
 
 En resumen, la aplicación web desarrollada ofrece una solución innovadora y práctica para mejorar la empleabilidad de personas con discapacidades, al mismo tiempo que contribuye a crear un entorno laboral más inclusivo y diverso.
 
+Usuario ya creado de prueba: DNI = 12345678A, Password = 1234
+
 ## Diagrama de Arquitectura
 
 Adjuntar una imagen del diagrama de arquitectura de la solución.
