@@ -17,6 +17,7 @@ Usuario ya creado de prueba: DNI = 12345678A, Password = 1234
 ## Diagrama de Arquitectura
 
 Adjuntar una imagen del diagrama de arquitectura de la solución.
+[![Diagrama](https://github.com/XaviFortes/front/blob/main/AWS.drawio.png)]
 
 ## Descripción Técnica
 
