@@ -24,8 +24,14 @@ Adjuntar una imagen del diagrama de arquitectura de la solución.
 Una visión general de:
 
 **¿Qué tipo de arquitectura habéis planteado?** Por lo general, las arquitecturas modernas de aplicaciones suelen utilizar microservicios y APIs para conectar los servicios, eso no quiere decir que nos podemos encontrar con arquitecturas de N-capas, arquitecturas monolíticas, de microservicios o basadas en eventos. Dependerá de vuestro caso de uso, pero nos gustaría conocer cuál ha sido vuestra elección.
-
+Nosotros hemos pensado en utilizar VueJS como frontend y acceder a APIs de AWS en este caso a través de Api Gateway y Lambda (Procesadores ARM (Graviton) en España), esta se conecta con DynamoDB (España) y ahí se almacenan los datos de cada usuario
 **¿Qué tecnologías AWS se han utilizado?**
+Api Gateway
+Lambda
+DynamoDB
+S3 para el contenido estático (VueJS) (No utilizado pero se utilizaria para mostrar el front)
+Terraform para la infraestructura como código con AWS.
+Se podría utilizar una Pipeline para crear un microservicio para según pusheas el repo se actualizase la imagen y sirva el nuevo contenido. (CI/CD).
 
 ## Demo Vídeo
 [![Watch the video](https://img.youtube.com/vi/TjRd_fVvnLM/maxresdefault.jpg)](https://youtu.be/TjRd_fVvnLM)
